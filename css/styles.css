@@ -16,7 +16,7 @@ body{
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #2F2F2F;
   color: #000;
 }
 img{
@@ -34,8 +34,124 @@ img{
   margin-right: auto;
   margin-left: auto;
 }
-
+*:focus{
+  outline: none;
+}
 /* MAIN CONTENT  */
 .main-content{
   flex-grow: 1;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.card {
+  width: 550px;
+  padding: 50px 50px 30px 50px;
+  background-color: #FDEC51;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.site-heading {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+.fas {
+  font-size: 30px;
+  cursor: pointer;
+  color: #7e762a;
+  transition: color 0.4s ease;
+}
+.fas:hover{
+  color: #000;
+}
+.card-box {
+  position: relative;
+  width: 550px;
+  padding: 60px 30px 30px 30px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 1px 12px 12px 0.5px #2F2F2F;
+}
+.user-img {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  border-radius: 50%;
+}
+.card-box-form {
+}
+.card-box-label {
+  display: block;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #afb0b2;
+}
+.card-box-label:nth-child(2){
+  display: inline-block;
+  width: 243px;
+}
+.card-box-label:nth-child(3){
+  display: inline-block;
+  width: 242px;
+}
+.card-box-input {
+  display: block;
+  color: #9a9a98;
+  margin: 0;
+  padding: 10px;
+  padding-left: 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #afb0b2;
+}
+.card-box-input:focus{
+  color: #000;
+  font-weight: 600;
+}
+.card-box-textarea{
+  padding-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  resize: vertical;
+  width: 100%;
+  min-height: 150px;
+  border: none;
+  border-bottom: 1px solid #afb0b2 ;
+  color: #9a9a98;
+}
+.card-box-textarea:focus{
+  color: #000;
+  font-weight: 600;
+}
+.card-footer {
+  display: flex;
+  justify-content: end;
+}
+.footer-link {
+  padding: 0;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #736E40;
+  background-color: #FDEC51;
+  transition: color 0.4s ease;
+}
+.footer-link:hover{
+  color: #000;
+}
+.footer-link:not(:last-child){
+  margin-right: 30px;
 }
