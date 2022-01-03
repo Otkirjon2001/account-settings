@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Account Settings</title>
-
+  <title>Loop-2-Step-2</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -22,33 +25,43 @@
         <form class="card-box-form" action="https://echo.htmlacademy.ru" method="POST">
           <div class="card-header">
             <h1 class="site-heading">Account Settings</h1>
-            <i class="fas fa-times"></i>
+            <a class="close-link" href="#">
+              <i class="fas fa-times"></i>
+            </a>
           </div>
           <div class="card-box">
-            <img class="user-img" src="https://via.placeholder.com/60/60" alt="">
-            <label class="card-box-label" for="username">USERNAME
+            <img class="user-img" src="/imgs/avatar.jpg" width="60" height="60" alt="user-img">
+
+            <div class="card-box-inner">
+              <label class="card-box-label" for="username">USERNAME</label>
               <input class="card-box-input" type="text" name="username" id="username" placeholder="Enter your username"
                 required>
-            </label>
+            </div>
 
-            <label class="card-box-label" for="firstname">FIRST NAME
-              <input class="card-box-input" type="text" name="firstname" id="firstname"
-                placeholder="Enter your first name" required>
-            </label>
+            <div class="card-box-wrapper">
+              <div class="card-box-inner">
+                <label class="card-box-label" for="firstname">FIRST NAME</label>
+                <input class="card-box-input" type="text" name="firstname" id="firstname"
+                  placeholder="Enter your first name" required>
+              </div>
+              <div class="card-box-inner">
+                <label class="card-box-label" for="lastname">LAST NAME</label>
+                <input class="card-box-input" type="text" name="lastname" id="lastname"
+                  placeholder="Enter your last name" required>
+              </div>
+            </div>
 
-            <label class="card-box-label" for="lastname">LAST NAME
-              <input class="card-box-input" type="text" name="lastname" id="lastname" placeholder="Enter your last name"
-                required>
-            </label>
-
-            <label class="card-box-label" for="email">EMAIL
+            <div class="card-box-inner">
+              <label class="card-box-label" for="email">EMAIL</label>
               <input class="card-box-input" type="email" name="email" id="email" placeholder="Enter your email"
-                required>
-            </label>
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            </div>
 
-            <label class="card-box-label" for="bio">BIO
+            <div class="card-box-inner">
+              <label class="card-box-label" for="bio">BIO</label>
               <textarea class="card-box-textarea" name="bio" id="bio" placeholder="Tell us about yourself"></textarea>
-            </label>
+            </div>
+
           </div>
           <div class="card-footer">
             <button class="footer-link" type="reset">Cancel</button>
@@ -59,7 +72,7 @@
       </div>
 
     </div>
-    </div>
+
   </main>
 
   <script src="js/main.js"></script>
